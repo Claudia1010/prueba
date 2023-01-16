@@ -19,7 +19,7 @@ return new class extends Migration
             $table->unsignedBigInteger('offer_id')->nullable();
             $table->foreign('offer_id')->references('id')->on('offers');
             $table->text('code');
-            $table->datetime();
+            $table->timestamps();
         });
     }
 

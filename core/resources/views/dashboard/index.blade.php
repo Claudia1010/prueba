@@ -28,6 +28,11 @@
                                 </ul>
                             </div>
                         @endif
+                        @if(session()->has('result'))
+                            <div class="alert alert-success">
+                                Oferta agregada con éxito
+                            </div>
+                        @endif
                     </div>
                 </div>
                 <div class="row">

@@ -20,7 +20,7 @@ class DashboardController extends AbstractAuthController
     
         Auth::user()->offers()->attach($data['id'], ['code' => Str::random(10)]);
 
-        return redirect()->route('dashboard.index');
+        return redirect()->route('dashboard.index')->with('result', true);
     }
 
     public function myOffers() {
