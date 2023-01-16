@@ -30,6 +30,25 @@
                         @endif
                     </div>
                 </div>
+                <div class="row">
+                    @foreach($offers as $offer)
+                    <div class="col-3">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-title">{{ $offer->text }}</div>
+                            </div>
+                            <div class="card-body">
+                                <h3>€{{ number_format($offer->price) }}</h3>
+                                <form action="" method="POST">
+                                 {{ csrf_field() }}
+                                    <input type="hidden" name="id" value="{{ $offer->id }}" />
+                                    <button type="submit" class="btn btn-primary">Solicitar</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
             </div>
         </div>
     </main>
