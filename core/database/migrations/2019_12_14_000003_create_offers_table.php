@@ -14,10 +14,9 @@ return new class extends Migration
     public function up()
     {
         Schema::create('offers', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id();
             $table->longText('text');
             $table->float('price');
-            $table->text('code');
             $table->timestamps();
         });
     }

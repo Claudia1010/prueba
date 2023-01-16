@@ -13,7 +13,7 @@
             <div class="col-lg-12 col-md-12">
                 <div class="row pt-3">
                     <div class="col">
-                        <h1 class="h2 mb-0">Bienvenid@ {{ Auth::user()->name }}</h1>
+                        <h1 class="h2 mb-0">Tus ofertas {{ Auth::user()->name }}</h1>
                         <hr class="hr-title" align="left">
                     </div>
                 </div>
@@ -39,11 +39,8 @@
                             </div>
                             <div class="card-body">
                                 <h3>€{{ number_format($offer->price) }}</h3>
-                                <form action="{{ route('dashboard.addoffertouser')}}" method="POST">
-                                 {{ csrf_field() }}
-                                    <input type="hidden" name="id" value="{{ $offer->id }}" />
-                                    <button type="submit" class="btn btn-primary">Solicitar</button>
-                                </form>
+                                <h5>Code: {{ $offer->pivot->code }}</h5>
+                                <h5>Date: {{ \Carbon\Carbon::parse($offer->created_at)->format('d-m-Y H:i:s') }}</h5>
                             </div>
                         </div>
                     </div>

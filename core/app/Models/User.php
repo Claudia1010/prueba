@@ -48,4 +48,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Log::class);
     }
+
+    public function offers()
+    {
+        return $this->belongsToMany(Offer::class)->withPivot('code')->withTimestamps();
+    }
 }

@@ -4,7 +4,6 @@ namespace Database\Seeders;
 
 use App\Models\Offer;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Str;
 
 class OfferSeeder extends Seeder
 {
@@ -17,22 +16,19 @@ class OfferSeeder extends Seeder
     {
         Offer::factory([
             'text' => 'Oferta restaurante',
-            'price' => 20,
-            'code' => Str::random(10)
+            'price' => 20
 
         ])->create();
 
         Offer::factory([
             'text' => 'Oferta ropa',
-            'price' => 40,
-            'code' => Str::random(10)
+            'price' => 40
 
         ])->create();
 
         Offer::factory([
             'text' => 'Oferta masajes',
-            'price' => 30,
-            'code' => Str::random(10)
+            'price' => 30
 
         ])->create();
 

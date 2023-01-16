@@ -6,11 +6,18 @@
             <ul id="sidebarnav">
                 <li class="sidebar-item">
                     <a
-                        class="sidebar-link has-arrow waves-effect waves-darkive"
-                        href="javascript:void(0)"
+                        class="sidebar-link waves-effect waves-darkive"
+                        href="{{ route('dashboard.index')}}"
                         aria-expanded="false"
-                    ><i class="mdi mdi-cart"></i
-                        ><span class="hide-menu">Listado 1 </span></a
+                    ><span class="hide-menu">Ofertas </span></a
+                    >
+                </li>
+                <li class="sidebar-item">
+                    <a
+                        class="sidebar-link waves-effect waves-darkive"
+                        href="{{ route('dashboard.myoffers')}}"
+                        aria-expanded="false"
+                    ><span class="hide-menu">Mis Ofertas </span></a
                     >
                 </li>
             </ul>

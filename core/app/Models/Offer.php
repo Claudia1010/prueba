@@ -13,4 +13,8 @@ class Offer extends Model
         'text', 'price', 'code'
     ];
 
+    public function users()
+    {
+        return $this->belongsToMany(User::class)->withPivot('code')->withTimestamps();
+    }
 }
